@@ -1,8 +1,8 @@
 # Site settings
-title:          Tale
-description:    "Minimal Jekyll theme for storytellers"
-baseurl:        "/tale"
-url:            "https://chesterhow.github.io"
+title:          Test Blog
+description:    "Minimal Jekyll"
+baseurl:        ""
+url:            "https://piquee-dev.github.io"
 
 # Google Analytics
 google_analytics: UA—XXXXXXXX-X
@@ -35,7 +35,12 @@ permalink:      /:year-:month-:day/:title
 paginate:       5
 
 # Excludes
-exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
 
 # Disqus (Set to your disqus id)
 disqus:         jekyll-tale
