@@ -1,7 +1,11 @@
 .container {
   margin: 0 auto;
-  max-width: 800px;
-  width: 80%;
+  max-width: 740px;  // Medium's content width
+  width: 90%;  // Better mobile
+  
+  @media (min-width: 600px) {
+    width: 85%;
+  }
 }
 
 main,
@@ -9,33 +13,45 @@ footer,
 .nav-container {
   display: block;
   margin: 0 auto;
-  max-width: 800px;
-  width: 80%;
+  max-width: 740px;  // Match container
+  width: 90%;
+  
+  @media (min-width: 600px) {
+    width: 85%;
+  }
 }
 
 .nav {
-  box-shadow: 0 2px 2px -2px $shadow-color;
+  border-bottom: 1px solid $grey-2;  // Subtle border
   overflow: auto;
+  padding: 1.5rem 0;
+}
 
-  &-container {
-    margin: 1rem auto;
-    position: relative;
-    text-align: center;
+.nav-container {
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+
+.nav-title {
+  @include transition(all .2s ease-out);
+  color: $default-color;
+  display: inline-block;
+  margin: 0;
+  padding-right: .2rem;
+  font-family: $sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+
+  &:hover,
+  &:focus {
+    opacity: .6;
+    text-decoration: none;
   }
+}
 
-  &-title {
-    @include transition(all .2s ease-out);
-    color: $default-color;
-    display: inline-block;
-    margin: 0;
-    padding-right: .2rem;
-
-    &:hover,
-    &:focus {
-      opacity: .6;
-    }
-  }
-
+.nav {
   ul {
     list-style-type: none;
     margin: 1rem 0 0;
@@ -45,10 +61,11 @@ footer,
 
   li {
     @include transition(all .2s ease-out);
-    color: $default-color;
+    color: $default-tint;
     display: inline-block;
-    opacity: .6;
-    padding: 0 2rem 0 0;
+    opacity: 1;
+    padding: 0 1.5rem 0 0;
+    font-size: 0.9rem;
 
     &:last-child {
       padding-right: 0;
@@ -56,37 +73,41 @@ footer,
 
     &:hover,
     &:focus {
-      opacity: 1;
+      color: $default-color;
     }
   }
 
   a {
-    color: $default-color;
+    color: $default-tint;
     font-family: $sans-serif;
+    text-decoration: none;
+    
+    &:hover {
+      color: $default-color;
+    }
   }
 }
 
 @media (min-width: 600px) {
-  .nav {
-    &-container {
-      text-align: left;
-    }
+  .nav-container {
+    text-align: left;
+  }
 
-    ul {
-      bottom: 0;
-      position: absolute;
-      right: 0;
-    }
+  .nav ul {
+    bottom: 0;
+    position: absolute;
+    right: 0;
   }
 }
 
 footer {
-  font-family: $serif-secondary;
-  padding: 2rem 0;
+  font-family: $sans-serif;
+  padding: 3rem 0;
   text-align: center;
+  border-top: 1px solid $grey-2;
 
   span {
-    color: $default-color;
-    font-size: .8rem;
+    color: $default-tint;
+    font-size: .85rem;
   }
 }
