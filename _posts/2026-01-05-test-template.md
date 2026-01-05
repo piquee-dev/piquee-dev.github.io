@@ -2,6 +2,7 @@
 layout: post
 title: "[Your Compelling Title Here]"
 author: "Your Name"
+sticky: true
 ---
 
 [Opening hook - specific moment or visceral detail]
