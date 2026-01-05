@@ -1,29 +1,56 @@
-// Dark mode styles
+// ============================================
+// COMPREHENSIVE DARK MODE - MEDIUM STYLE
+// ============================================
+
 @media (prefers-color-scheme: dark) {
+  
+  // ============================================
+  // BASE STYLES
+  // ============================================
+  
   body {
     background-color: $dark-bg;
     color: $dark-text;
   }
 
+  // ============================================
+  // TYPOGRAPHY
+  // ============================================
+  
   h1, h2, h3, h4, h5, h6 {
     color: $dark-text;
   }
 
+  // Links - Medium style with subtle underline
   a {
     color: $dark-text;
     text-decoration-color: $dark-text-tertiary;
     
-    &:hover {
+    &:hover,
+    &:focus {
       text-decoration-color: $dark-text;
     }
   }
 
-  // Navigation
+  // ============================================
+  // NAVIGATION
+  // ============================================
+  
   .nav {
     border-bottom-color: $dark-border;
+    background-color: $dark-bg;
   }
 
   .nav-title {
+    color: $dark-text;
+    
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+  }
+
+  .nav ul {
     color: $dark-text;
   }
 
@@ -44,46 +71,158 @@
     }
   }
 
-  // Posts
+  // ============================================
+  // POST CONTENT
+  // ============================================
+  
+  .post {
+    color: $dark-text;
+  }
+
   .post-info {
     color: $dark-text-tertiary;
+    
+    span {
+      color: $dark-text-tertiary;
+    }
   }
 
   .post-title {
     color: $dark-text;
   }
 
+  .post-line {
+    border-top-color: $dark-text;
+  }
+
+  // First paragraph (intro) - Medium style
   .post > p:first-of-type {
     color: $dark-text-secondary;
+  }
+
+  // All paragraphs
+  .post p {
+    color: $dark-text;
+  }
+
+  // Links in posts
+  .post a {
+    color: $dark-text;
+    
+    &:hover {
+      text-decoration-color: $dark-text;
+    }
+  }
+
+  // ============================================
+  // BLOCKQUOTES - Medium Style
+  // ============================================
+  
+  blockquote {
+    border-left-color: rgba(255, 255, 255, 0.8);
+    color: $dark-text-secondary;
+    background-color: rgba(255, 255, 255, 0.03);
+    
+    p {
+      color: $dark-text-secondary;
+    }
+    
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // ============================================
+  // CODE BLOCKS
+  // ============================================
+  
+  // Inline code
+  code {
+    background-color: $dark-code-bg;
+    color: #ff6b9d;
   }
 
   // Code blocks
-  code {
-    background-color: $dark-code-bg;
-    color: #ff6b9d;
-  }
-
   pre {
     background-color: #2d2d2d;
+    border: 1px solid $dark-border;
+    
+    code {
+      background-color: transparent;
+      color: #e6e6e6;
+    }
   }
 
+  // Syntax highlighting
   .highlight {
     background-color: #2d2d2d;
+    border: 1px solid $dark-border;
+    
+    pre {
+      border: none;
+    }
+
+    .lineno {
+      color: $dark-text-tertiary;
+    }
   }
 
-  // Blockquotes
-  blockquote {
-    border-left-color: $dark-blockquote-border;
-    color: $dark-text-secondary;
+  // ============================================
+  // LISTS
+  // ============================================
+  
+  .post ul,
+  .post ol {
+    color: $dark-text;
+    
+    li {
+      color: $dark-text;
+    }
   }
 
-  // Catalogue (post listings)
+  // ============================================
+  // IMAGES & CAPTIONS
+  // ============================================
+  
+  img {
+    border: 1px solid $dark-border;
+    opacity: 0.95;
+  }
+
+  // Image captions (italic text below images)
+  .post img + em {
+    color: $dark-text-tertiary;
+  }
+
+  // ============================================
+  // HORIZONTAL RULES
+  // ============================================
+  
+  hr {
+    border-top-color: $dark-border;
+  }
+
+  .post hr {
+    border-top-color: $dark-border;
+  }
+
+  // ============================================
+  // CATALOGUE (Post Listings)
+  // ============================================
+  
   .catalogue-item {
     border-bottom-color: $dark-border;
     color: $dark-text;
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
   }
 
-  .catalogue-time,
+  .catalogue-time {
+    color: $dark-text-tertiary;
+  }
+
   .catalogue-pinned {
     color: $dark-text-tertiary;
   }
@@ -92,11 +231,18 @@
     color: $dark-text;
   }
 
+  .catalogue-excerpt {
+    color: $dark-text-secondary;
+  }
+
   .catalogue-line {
     border-top-color: $dark-text;
   }
 
-  // Pagination
+  // ============================================
+  // PAGINATION
+  // ============================================
+  
   .pagination {
     border-top-color: $dark-border;
   }
@@ -115,161 +261,218 @@
 
   .pagination .arrow {
     color: $dark-text;
-  }
-
-  // Footer
-  footer {
-    border-top-color: $dark-border;
-  }
-
-  footer span {
-    color: $dark-text-tertiary;
-  }
-
-  // Images - add subtle border
-  img {
-    border: 1px solid $dark-border;
-  }
-
-  // Image captions
-  .post img + em {
-    color: $dark-text-tertiary;
-  }
-
-  // Horizontal rules
-  hr {
-    border-top-color: $dark-border;
-  }
-}
-
-// Manual dark mode toggle (if you add a button later)
-body.dark-mode {
-  background-color: $dark-bg;
-  color: $dark-text;
-
-  h1, h2, h3, h4, h5, h6 {
-    color: $dark-text;
-  }
-
-  a {
-    color: $dark-text;
-    text-decoration-color: $dark-text-tertiary;
-    
-    &:hover {
-      text-decoration-color: $dark-text;
-    }
-  }
-
-  .nav {
-    border-bottom-color: $dark-border;
-  }
-
-  .nav-title {
-    color: $dark-text;
-  }
-
-  .nav li {
-    color: $dark-text-tertiary;
     
     &:hover,
     &:focus {
-      color: $dark-text;
+      opacity: 0.7;
     }
   }
 
-  .nav a {
-    color: $dark-text-tertiary;
-    
-    &:hover {
-      color: $dark-text;
-    }
-  }
-
-  .post-info {
-    color: $dark-text-tertiary;
-  }
-
-  .post-title {
+  .pagination .left,
+  .pagination .right {
     color: $dark-text;
   }
 
-  .post > p:first-of-type {
-    color: $dark-text-secondary;
-  }
-
-  code {
-    background-color: $dark-code-bg;
-    color: #ff6b9d;
-  }
-
-  pre {
-    background-color: #2d2d2d;
-  }
-
-  .highlight {
-    background-color: #2d2d2d;
-  }
-
-  blockquote {
-    border-left-color: $dark-blockquote-border;
-    color: $dark-text-secondary;
-  }
-
-  .catalogue-item {
-    border-bottom-color: $dark-border;
-    color: $dark-text;
-  }
-
-  .catalogue-time,
-  .catalogue-pinned {
-    color: $dark-text-tertiary;
-  }
-
-  .catalogue-title {
-    color: $dark-text;
-  }
-
-  .catalogue-line {
-    border-top-color: $dark-text;
-  }
-
-  .pagination {
-    border-top-color: $dark-border;
-  }
-
-  .pagination span {
-    color: $dark-text;
-  }
-
-  .pagination .top {
-    color: $dark-text-tertiary;
-    
-    &:hover {
-      color: $dark-text;
-    }
-  }
-
-  .pagination .arrow {
-    color: $dark-text;
-  }
-
+  // ============================================
+  // FOOTER
+  // ============================================
+  
   footer {
     border-top-color: $dark-border;
+    background-color: $dark-bg;
   }
 
   footer span {
     color: $dark-text-tertiary;
   }
 
-  img {
-    border: 1px solid $dark-border;
-  }
-
-  .post img + em {
+  footer a {
     color: $dark-text-tertiary;
+    
+    &:hover {
+      color: $dark-text;
+    }
   }
 
-  hr {
-    border-top-color: $dark-border;
+  // ============================================
+  // TABLES (if you use them)
+  // ============================================
+  
+  table {
+    border-color: $dark-border;
+    color: $dark-text;
+  }
+
+  thead {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  th {
+    border-color: $dark-border;
+    color: $dark-text;
+  }
+
+  td {
+    border-color: $dark-border;
+    color: $dark-text;
+  }
+
+  tr {
+    border-color: $dark-border;
+    
+    &:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+  }
+
+  // ============================================
+  // EMPHASIS & STRONG
+  // ============================================
+  
+  strong, b {
+    color: $dark-text;
+    font-weight: 700;
+  }
+
+  em, i {
+    color: $dark-text;
+  }
+
+  // ============================================
+  // 404 / NOT FOUND PAGE
+  // ============================================
+  
+  .notfound {
+    color: $dark-text;
+  }
+
+  .notfound-error {
+    color: $dark-text;
+  }
+
+  .notfound-line {
+    border-top-color: $dark-text;
+  }
+
+  .notfound-message {
+    color: $dark-text-secondary;
+  }
+
+  // ============================================
+  // TAGS PAGE (if using tags)
+  // ============================================
+  
+  .tags-header-title {
+    color: $dark-text;
+  }
+
+  .tags-header-line {
+    border-top-color: $dark-text;
+  }
+
+  .tags-clouds a {
+    background: rgba(255, 255, 255, 0.1);
+    color: $dark-text;
+    
+    &:hover,
+    &:active {
+      background: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  .tags-item-label {
+    color: $dark-text;
+  }
+
+  .tags-post {
+    color: $dark-text;
+  }
+
+  .tags-post-title {
+    color: $dark-text;
+    
+    &:hover {
+      color: $dark-text-secondary;
+    }
+  }
+
+  .tags-post-line {
+    border-top-color: $dark-text;
+  }
+
+  .tags-post-meta {
+    color: $dark-text-tertiary;
+    
+    .tags-post:hover &,
+    .tags-post:active & {
+      color: $dark-text;
+    }
+  }
+
+  // ============================================
+  // SELECTION (text highlight)
+  // ============================================
+  
+  ::selection {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: $dark-text;
+  }
+
+  ::-moz-selection {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: $dark-text;
+  }
+
+  // ============================================
+  // SCROLLBAR (webkit browsers)
+  // ============================================
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+    background-color: $dark-bg;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: $dark-bg;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  // ============================================
+  // FORMS (if you add them later)
+  // ============================================
+  
+  input,
+  textarea,
+  select {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: $dark-text;
+    border-color: $dark-border;
+    
+    &:focus {
+      border-color: rgba(255, 255, 255, 0.3);
+      outline: none;
+    }
+    
+    &::placeholder {
+      color: $dark-text-tertiary;
+    }
+  }
+
+  button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: $dark-text;
+    border-color: $dark-border;
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
   }
 }
