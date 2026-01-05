@@ -1,4 +1,21 @@
-// Colors - Medium-inspired but keeping Tale's simplicity
+// Light mode colors (default)
+$light-bg: #fff;
+$light-text: rgba(0, 0, 0, 0.84);
+$light-text-secondary: rgba(0, 0, 0, 0.68);
+$light-text-tertiary: rgba(0, 0, 0, 0.54);
+$light-border: rgba(0, 0, 0, 0.15);
+$light-code-bg: rgba(0, 0, 0, 0.05);
+$light-blockquote-border: rgba(0, 0, 0, 0.84);
+
+// Dark mode colors
+$dark-bg: #1a1a1a;
+$dark-text: rgba(255, 255, 255, 0.92);
+$dark-text-secondary: rgba(255, 255, 255, 0.78);
+$dark-text-tertiary: rgba(255, 255, 255, 0.60);
+$dark-border: rgba(255, 255, 255, 0.15);
+$dark-code-bg: rgba(255, 255, 255, 0.1);
+$dark-blockquote-border: rgba(255, 255, 255, 0.6);
+
 $default-color: rgba(0, 0, 0, 0.84);  // Medium's text color
 $default-shade: rgba(0, 0, 0, 0.68);  // Lighter text
 $default-tint: rgba(0, 0, 0, 0.54);   // Even lighter
