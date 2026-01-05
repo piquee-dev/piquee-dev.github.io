@@ -1,10 +1,14 @@
 .container {
   margin: 0 auto;
-  max-width: 740px;  // Medium's content width
-  width: 90%;  // Better mobile
+  max-width: 850px;  // Even wider
+  width: 90%;
   
   @media (min-width: 600px) {
-    width: 85%;
+    width: 90%;  // Use 90% on tablets
+  }
+  
+  @media (min-width: 1000px) {
+    width: 80%;  // Large desktops
   }
 }
 
@@ -13,11 +17,15 @@ footer,
 .nav-container {
   display: block;
   margin: 0 auto;
-  max-width: 740px;  // Match container
+  max-width: 850px;
   width: 90%;
   
   @media (min-width: 600px) {
-    width: 85%;
+    width: 90%;
+  }
+  
+  @media (min-width: 1000px) {
+    width: 80%;
   }
 }
 
