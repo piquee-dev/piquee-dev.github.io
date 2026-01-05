@@ -1,0 +1,275 @@
+// Dark mode styles
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $dark-bg;
+    color: $dark-text;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $dark-text;
+  }
+
+  a {
+    color: $dark-text;
+    text-decoration-color: $dark-text-tertiary;
+    
+    &:hover {
+      text-decoration-color: $dark-text;
+    }
+  }
+
+  // Navigation
+  .nav {
+    border-bottom-color: $dark-border;
+  }
+
+  .nav-title {
+    color: $dark-text;
+  }
+
+  .nav li {
+    color: $dark-text-tertiary;
+    
+    &:hover,
+    &:focus {
+      color: $dark-text;
+    }
+  }
+
+  .nav a {
+    color: $dark-text-tertiary;
+    
+    &:hover {
+      color: $dark-text;
+    }
+  }
+
+  // Posts
+  .post-info {
+    color: $dark-text-tertiary;
+  }
+
+  .post-title {
+    color: $dark-text;
+  }
+
+  .post > p:first-of-type {
+    color: $dark-text-secondary;
+  }
+
+  // Code blocks
+  code {
+    background-color: $dark-code-bg;
+    color: #ff6b9d;
+  }
+
+  pre {
+    background-color: #2d2d2d;
+  }
+
+  .highlight {
+    background-color: #2d2d2d;
+  }
+
+  // Blockquotes
+  blockquote {
+    border-left-color: $dark-blockquote-border;
+    color: $dark-text-secondary;
+  }
+
+  // Catalogue (post listings)
+  .catalogue-item {
+    border-bottom-color: $dark-border;
+    color: $dark-text;
+  }
+
+  .catalogue-time,
+  .catalogue-pinned {
+    color: $dark-text-tertiary;
+  }
+
+  .catalogue-title {
+    color: $dark-text;
+  }
+
+  .catalogue-line {
+    border-top-color: $dark-text;
+  }
+
+  // Pagination
+  .pagination {
+    border-top-color: $dark-border;
+  }
+
+  .pagination span {
+    color: $dark-text;
+  }
+
+  .pagination .top {
+    color: $dark-text-tertiary;
+    
+    &:hover {
+      color: $dark-text;
+    }
+  }
+
+  .pagination .arrow {
+    color: $dark-text;
+  }
+
+  // Footer
+  footer {
+    border-top-color: $dark-border;
+  }
+
+  footer span {
+    color: $dark-text-tertiary;
+  }
+
+  // Images - add subtle border
+  img {
+    border: 1px solid $dark-border;
+  }
+
+  // Image captions
+  .post img + em {
+    color: $dark-text-tertiary;
+  }
+
+  // Horizontal rules
+  hr {
+    border-top-color: $dark-border;
+  }
+}
+
+// Manual dark mode toggle (if you add a button later)
+body.dark-mode {
+  background-color: $dark-bg;
+  color: $dark-text;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $dark-text;
+  }
+
+  a {
+    color: $dark-text;
+    text-decoration-color: $dark-text-tertiary;
+    
+    &:hover {
+      text-decoration-color: $dark-text;
+    }
+  }
+
+  .nav {
+    border-bottom-color: $dark-border;
+  }
+
+  .nav-title {
+    color: $dark-text;
+  }
+
+  .nav li {
+    color: $dark-text-tertiary;
+    
+    &:hover,
+    &:focus {
+      color: $dark-text;
+    }
+  }
+
+  .nav a {
+    color: $dark-text-tertiary;
+    
+    &:hover {
+      color: $dark-text;
+    }
+  }
+
+  .post-info {
+    color: $dark-text-tertiary;
+  }
+
+  .post-title {
+    color: $dark-text;
+  }
+
+  .post > p:first-of-type {
+    color: $dark-text-secondary;
+  }
+
+  code {
+    background-color: $dark-code-bg;
+    color: #ff6b9d;
+  }
+
+  pre {
+    background-color: #2d2d2d;
+  }
+
+  .highlight {
+    background-color: #2d2d2d;
+  }
+
+  blockquote {
+    border-left-color: $dark-blockquote-border;
+    color: $dark-text-secondary;
+  }
+
+  .catalogue-item {
+    border-bottom-color: $dark-border;
+    color: $dark-text;
+  }
+
+  .catalogue-time,
+  .catalogue-pinned {
+    color: $dark-text-tertiary;
+  }
+
+  .catalogue-title {
+    color: $dark-text;
+  }
+
+  .catalogue-line {
+    border-top-color: $dark-text;
+  }
+
+  .pagination {
+    border-top-color: $dark-border;
+  }
+
+  .pagination span {
+    color: $dark-text;
+  }
+
+  .pagination .top {
+    color: $dark-text-tertiary;
+    
+    &:hover {
+      color: $dark-text;
+    }
+  }
+
+  .pagination .arrow {
+    color: $dark-text;
+  }
+
+  footer {
+    border-top-color: $dark-border;
+  }
+
+  footer span {
+    color: $dark-text-tertiary;
+  }
+
+  img {
+    border: 1px solid $dark-border;
+  }
+
+  .post img + em {
+    color: $dark-text-tertiary;
+  }
+
+  hr {
+    border-top-color: $dark-border;
+  }
+}
