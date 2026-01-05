@@ -1,16 +1,19 @@
 ---
 layout: default
 ---
-
 <div class="catalogue">
+  {% comment %} Show sticky posts first (exclude hidden ones) {% endcomment %}
   {% for post in site.posts %}
-    {% if post.sticky %}
+    {% if post.sticky and post.hidden != true %}
       {% include catalogue_item.html sticky='true' %}
     {% endif %}
   {% endfor %}
-
+  
+  {% comment %} Show regular paginated posts (exclude sticky and hidden) {% endcomment %}
   {% for post in paginator.posts %}
-    {% include catalogue_item.html %}
+    {% if post.sticky != true and post.hidden != true %}
+      {% include catalogue_item.html %}
+    {% endif %}
   {% endfor %}
 </div>
 
@@ -21,6 +24,5 @@ layout: default
   {% if paginator.next_page %}
     <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
   {% endif %}
-
   <span>{{ paginator.page }}</span>
 </div>
